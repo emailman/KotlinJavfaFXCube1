@@ -17,6 +17,10 @@ class CubeController {
     lateinit var sldY2: Slider
     lateinit var sldZ2: Slider
 
+    lateinit var sldX3: Slider
+    lateinit var sldY3: Slider
+    lateinit var sldZ3: Slider
+
 
     fun initialize() {
         // Create a 3D Box
@@ -50,7 +54,7 @@ class CubeController {
         camera.translateZ = 250.0
 
         // Create a scene
-        val scene = Scene(group, 600.0, 600.0)
+        val scene = Scene(group, 1000.0, 1000.0)
         scene.camera = camera
 
         // Create a stage
@@ -59,14 +63,19 @@ class CubeController {
         stage.scene = scene
         stage.show()
 
-        // Bind the 1st 3 sliders to the size of the box
+        // Bind the 1st set of sliders to the size of the box
         box.scaleXProperty().bind(sldX1.valueProperty())
         box.scaleYProperty().bind(sldY1.valueProperty())
         box.scaleZProperty().bind(sldZ1.valueProperty())
 
-        // Bind the 2nd 3 slider to the box position
+        // Bind the 2nd set of sliders to the box position
         box.translateXProperty().bind(sldX2.valueProperty())
         box.translateYProperty().bind(sldY2.valueProperty())
         box.translateZProperty().bind(sldZ2.valueProperty())
+
+        // Bind the 3rd set of sliders to the light position
+        light.translateXProperty().bind(sldX3.valueProperty())
+        light.translateYProperty().bind(sldY3.valueProperty())
+        light.translateZProperty().bind(sldZ3.valueProperty())
     }
 }
