@@ -64,9 +64,9 @@ class CubeController {
         box.scaleYProperty().bind(sldY1.valueProperty())
         box.scaleZProperty().bind(sldZ1.valueProperty())
 
-        // Bind the 2nd 3 slider to the camera position
-        camera.translateXProperty().bind(sldX2.valueProperty())
-        camera.translateYProperty().bind(sldY2.valueProperty())
-        camera.translateZProperty().bind(sldZ2.valueProperty())
+        // Bind the 2nd 3 slider to the box position
+        box.translateXProperty().bind(sldX2.valueProperty())
+        box.translateYProperty().bind(sldY2.valueProperty())
+        box.translateZProperty().bind(sldZ2.valueProperty())
     }
 }
