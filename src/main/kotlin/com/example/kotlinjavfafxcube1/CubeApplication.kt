@@ -10,7 +10,7 @@ class CubeApplication : Application() {
         val fxmlLoader = FXMLLoader(
             CubeApplication::
             class.java.getResource("controls-view.fxml"))
-        val scene = Scene(fxmlLoader.load(), 320.0, 300.0)
+        val scene = Scene(fxmlLoader.load(), 350.0, 300.0)
         stage.title = "3D Controls"
         stage.scene = scene
         stage.show()

@@ -7,7 +7,6 @@ import javafx.scene.shape.Box
 import javafx.scene.transform.Rotate
 import javafx.stage.Stage
 
-
 class CubeController {
     lateinit var sldX1: Slider
     lateinit var sldY1: Slider
@@ -21,30 +20,20 @@ class CubeController {
     lateinit var sldY3: Slider
     lateinit var sldZ3: Slider
 
+    lateinit var sldX4: Slider
+    lateinit var sldY4: Slider
+    lateinit var sldZ4: Slider
 
     fun initialize() {
         // Create a 3D Box
         val box = Box(200.0, 200.0, 200.0)
-        // box.cullFace = CullFace.NONE
-        box.translateX = 400.0
-        box.translateY = 300.0
-        box.translateZ = 400.0
 
         // Create a Point Light
         val light = PointLight(Color.CYAN)
-        light.translateX = 100.0
-        light.translateY = 100.0
-        light.translateZ = 100.0
 
         // Create a Group
         val group = Group()
         group.children.addAll(box, light)
-        group.rotationAxis = Rotate.X_AXIS
-        group.rotate = 45.0
-        group.rotationAxis = Rotate.Y_AXIS
-        group.rotate = 45.0
-        group.rotationAxis = Rotate.Z_AXIS
-        group.rotate = 45.0
 
         // Create a Camera
         val fixedEyeAtCameraZero = false
@@ -77,5 +66,21 @@ class CubeController {
         light.translateXProperty().bind(sldX3.valueProperty())
         light.translateYProperty().bind(sldY3.valueProperty())
         light.translateZProperty().bind(sldZ3.valueProperty())
+
+        // Add listeners to the 4th set of sliders to rotate box
+        sldX4.valueProperty().addListener { _ ->
+            group.rotationAxis = Rotate.X_AXIS
+            group.rotate = sldX4.value
+        }
+
+        sldY4.valueProperty().addListener { _ ->
+            group.rotationAxis = Rotate.Y_AXIS
+            group.rotate = sldY4.value
+        }
+
+        sldZ4.valueProperty().addListener { _ ->
+            group.rotationAxis = Rotate.Z_AXIS
+            group.rotate = sldZ4.value
+        }
     }
 }

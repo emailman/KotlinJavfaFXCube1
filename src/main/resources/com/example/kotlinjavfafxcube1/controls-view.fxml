@@ -35,60 +35,87 @@
          </content>
       </Tab>
       <Tab closable="false" text="Box Location">
-               <content>
-                  <VBox prefHeight="240.0" prefWidth="222.0" spacing="10.0">
-                        <Label text="x-box" />
-                        <Slider fx:id="sldX2" blockIncrement="20.0" majorTickUnit="250.0" max="1000.0" minorTickCount="20" showTickLabels="true" value="500.0">
-                           <VBox.margin>
-                              <Insets bottom="10.0" />
-                           </VBox.margin>
-                        </Slider>
-                        <Label text="y-box">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Label>
-                        <Slider fx:id="sldY2" blockIncrement="50.0" majorTickUnit="50.0" max="400.0" showTickLabels="true" value="200.0">
-                           <VBox.margin>
-                              <Insets bottom="10.0" />
-                           </VBox.margin>
-                        </Slider>
-                        <Label text="z-box" />
-                        <Slider fx:id="sldZ2" majorTickUnit="100.0" max="400.0" min="-400.0" showTickLabels="true" value="200.0" />
+           <content>
+              <VBox prefHeight="240.0" prefWidth="222.0" spacing="10.0">
+                    <Label text="x-box" />
+                    <Slider fx:id="sldX2" blockIncrement="20.0" majorTickUnit="250.0" max="1000.0" minorTickCount="20" showTickLabels="true" value="500.0">
+                       <VBox.margin>
+                          <Insets bottom="10.0" />
+                       </VBox.margin>
+                    </Slider>
+                    <Label text="y-box">
+                       <VBox.margin>
+                          <Insets />
+                       </VBox.margin>
+                    </Label>
+                    <Slider fx:id="sldY2" blockIncrement="50.0" majorTickUnit="50.0" max="400.0" showTickLabels="true" value="200.0">
+                       <VBox.margin>
+                          <Insets bottom="10.0" />
+                       </VBox.margin>
+                    </Slider>
+                    <Label text="z-box" />
+                    <Slider fx:id="sldZ2" majorTickUnit="100.0" max="400.0" min="-400.0" showTickLabels="true" value="200.0" />
 
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </VBox>
-               </content>
-            </Tab>
-            <Tab closable="false" text="Light Location">
-                           <content>
-                              <VBox prefHeight="240.0" prefWidth="222.0" spacing="10.0">
-                                    <Label text="x-light" />
-                                    <Slider fx:id="sldX3" blockIncrement="20.0" majorTickUnit="250.0" max="1000.0" minorTickCount="20" showTickLabels="true" value="500.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </Slider>
-                                    <Label text="y-light">
-                                       <VBox.margin>
-                                          <Insets />
-                                       </VBox.margin>
-                                    </Label>
-                                    <Slider fx:id="sldY3" blockIncrement="50.0" majorTickUnit="250.0" max="1000.0" showTickLabels="true" value="500.0">
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                    </Slider>
-                                    <Label text="z-light" />
-                                    <Slider fx:id="sldZ3" majorTickUnit="250.0" max="1000.0" showTickLabels="true" value="500.0" />
+                 <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                 </padding>
+              </VBox>
+           </content>
+      </Tab>
+        <Tab closable="false" text="Light Location">
+           <content>
+              <VBox prefHeight="240.0" prefWidth="222.0" spacing="10.0">
+                    <Label text="x-light" />
+                    <Slider fx:id="sldX3" blockIncrement="20.0" majorTickUnit="250.0" max="1000.0" minorTickCount="20" showTickLabels="true" value="500.0">
+                       <VBox.margin>
+                          <Insets bottom="10.0" />
+                       </VBox.margin>
+                    </Slider>
+                    <Label text="y-light">
+                       <VBox.margin>
+                          <Insets />
+                       </VBox.margin>
+                    </Label>
+                    <Slider fx:id="sldY3" blockIncrement="50.0" majorTickUnit="250.0" max="1000.0" showTickLabels="true" value="500.0">
+                       <VBox.margin>
+                          <Insets bottom="10.0" />
+                       </VBox.margin>
+                    </Slider>
+                    <Label text="z-light" />
+                    <Slider fx:id="sldZ3" majorTickUnit="250.0" max="1000.0" showTickLabels="true" value="500.0" />
+                 <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                 </padding>
+              </VBox>
+           </content>
+      </Tab>
+        <Tab closable="false" text="Cube Rotation">
+           <content>
+              <VBox prefHeight="240.0" prefWidth="222.0" spacing="10.0">
+                    <Label text="x-rotate" />
+                    <Slider fx:id="sldX4" blockIncrement="20.0" majorTickUnit="45.0" max="360.0" minorTickCount="20" showTickLabels="true">
+                       <VBox.margin>
+                          <Insets bottom="10.0" />
+                       </VBox.margin>
+                    </Slider>
+                    <Label text="y-rotate">
+                       <VBox.margin>
+                          <Insets />
+                       </VBox.margin>
+                    </Label>
+                    <Slider fx:id="sldY4" blockIncrement="50.0" majorTickUnit="45.0" max="360.0" showTickLabels="true" value="500.0">
+                       <VBox.margin>
+                          <Insets bottom="10.0" />
+                       </VBox.margin>
+                    </Slider>
+                    <Label text="z-rotate" />
+                    <Slider fx:id="sldZ4" majorTickUnit="45.0" max="360.0" showTickLabels="true" value="500.0" />
 
-                                 <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                 </padding>
-                              </VBox>
-                           </content>
-                        </Tab>
+                 <padding>
+                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                 </padding>
+              </VBox>
+           </content>
+        </Tab>
    </tabs>
 </TabPane>
