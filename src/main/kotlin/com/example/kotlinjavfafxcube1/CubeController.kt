@@ -69,18 +69,18 @@ class CubeController {
 
         // Add listeners to the 4th set of sliders to rotate box
         sldX4.valueProperty().addListener { _ ->
-            group.rotationAxis = Rotate.X_AXIS
-            group.rotate = sldX4.value
+            box.rotationAxis = Rotate.X_AXIS
+            box.rotate = sldX4.value
         }
 
         sldY4.valueProperty().addListener { _ ->
-            group.rotationAxis = Rotate.Y_AXIS
-            group.rotate = sldY4.value
+            box.rotationAxis = Rotate.Y_AXIS
+            box.rotate = sldY4.value
         }
 
         sldZ4.valueProperty().addListener { _ ->
-            group.rotationAxis = Rotate.Z_AXIS
-            group.rotate = sldZ4.value
+            box.rotationAxis = Rotate.Z_AXIS
+            box.rotate = sldZ4.value
         }
     }
 }
